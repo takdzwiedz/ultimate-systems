@@ -8,7 +8,7 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class LogoutController extends AbstractController
 {
-    #[Route('/logout', name: 'app_logout')]
+    #[Route('/api/logout', name: 'app_logout')]
     public function index(): Response
     {
         return $this->render('logout/index.html.twig', [
