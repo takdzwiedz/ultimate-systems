@@ -8,7 +8,7 @@ nelmio_api_doc:
 
     documentation:
         servers:
-            - url: http://127.0.0.1.80800
+            - url: http://127.0.0.1.8080
               description: API over HTTP
         info:
             title: Ultimates System
@@ -23,18 +23,11 @@ nelmio_api_doc:
         security:
             - Bearer: []
         paths:
-            /register:
+            /api/login_check:
                 post:
-                    summary: create user
-            /login:
+                    summary: retrieve JWT Token
+            /api/admin:
                 get:
-                    summary: login user
-            /admin:
-                get:
-                    summary: display admin site
-            /logout:
-                get:
-                    summary: logout user
-
+                    summary: access with JWT Token
 
 
