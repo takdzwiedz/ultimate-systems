@@ -1,9 +1,40 @@
 nelmio_api_doc:
+    areas:
+        path_patterns: # an array of regexps (document only routes under /api, except /api/doc)
+            - ^/api(?!/doc$)
+        host_patterns: # document only routes with a host of the form api.*
+            - ^api\.
+
+
     documentation:
+        servers:
+            - url: http://127.0.0.1.80800
+              description: API over HTTP
         info:
-            title: My App
+            title: Ultimates System
             description: This is an awesome app!
             version: 1.0.0
-    areas: # to filter documented areas
-        path_patterns:
-            - ^/api(?!/doc$) # Accepts routes under /api except /api/doc
+        components:
+            securitySchemes:
+                Bearer:
+                    type: http
+                    scheme: bearer
+                    bearerFormat: JWT
+        security:
+            - Bearer: []
+        paths:
+            /register:
+                post:
+                    summary: create user
+            /login:
+                get:
+                    summary: login user
+            /admin:
+                get:
+                    summary: display admin site
+            /logout:
+                get:
+                    summary: logout user
+
+
+
