@@ -35,4 +35,5 @@ open browser and got o `127.0.0.1:8080/api doc` to see available routes
 
 `git checkout jwt`
 
-and try route '/api/login' with right credentials created on branch main in route /register to get JWT Token and use it to access route 
+and try route `/api/login_check` to get JWT Token
+use  JWT Token to access `/api/admin`
