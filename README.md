@@ -29,7 +29,7 @@ launch local server
 
 `git checkout main`
 
-open browser and got o `127.0.0.1:8080/api doc` to see available routes
+open browser and got o `127.0.0.1:8080/api/doc` to see available routes
 
 ### 2. Proto JWT authorisation on early stage is on branch 'jwt'
 
